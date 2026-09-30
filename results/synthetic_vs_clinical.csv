@@ -1,0 +1,5 @@
+model,mean_margin,cancer_types_won,cancer_types_total,win_rate
+clinical_plus_expression,0.039,4,4,1.0
+expression_coxnet,0.027,3,4,0.75
+random_survival_forest,0.01,1,4,0.25
+random_signature,-0.013,2,4,0.5

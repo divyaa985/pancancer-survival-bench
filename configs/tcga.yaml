@@ -1,0 +1,19 @@
+# TCGA pan-cancer. Download both files into data/ first; see README.
+name: tcga_pfi
+expression: data/tcga_pancan_expression.tsv
+cdr: data/TCGA-CDR-SupplementalTableS1.xlsx
+
+# PFI is recommended for 27 of 33 TCGA cancer types (Liu et al. 2018).
+# Per-cancer recommendations from that paper are not yet transcribed here.
+endpoint: PFI
+
+min_events: 30
+min_patients: 100
+splits: 5
+seeds: [0, 1, 2]
+models:
+  - clinical_only
+  - random_signature
+  - expression_coxnet
+  - clinical_plus_expression
+  - random_survival_forest

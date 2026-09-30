@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Data is never committed, but the folder note is
+data/*
+!data/README.md
+*.h5ad
+*.tsv
+*.xlsx
+
+# Results: summaries and figures are committed, raw intermediates are not
+results/*
+!results/.gitkeep
+!results/*_summary.md
+!results/*_summary.csv
+!results/*_folds.csv
+!results/*_vs_clinical.csv
+!results/figures/
+!results/figures/*.png
+
+.env
+.DS_Store
